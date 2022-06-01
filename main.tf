@@ -90,9 +90,9 @@ resource "aws_instance" "testInstance" {
   instance_type = "${var.instance_type}"
   subnet_id = "${aws_subnet.subnet_public.id}"
   vpc_security_group_ids = ["${aws_security_group.sg_22.id}"]
-  user_data = <<- EOF
+  user_data = "<<- EOF
                mkdir /var/log/ts
-  EOF
+  EOF"
   key_name = "chandukey" 
 
   
