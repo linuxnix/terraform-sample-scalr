@@ -90,7 +90,7 @@ resource "aws_instance" "testInstance" {
   instance_type = "${var.instance_type}"
   subnet_id = "${aws_subnet.subnet_public.id}"
   vpc_security_group_ids = ["${aws_security_group.sg_22.id}"]
-  user_data = "${file("install_apache.sh")}"
+  user_data = "${file("instancedata.sh")}"
 
   key_name = "chandukey" 
 
