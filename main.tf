@@ -96,6 +96,6 @@ resource "aws_instance" "testInstance" {
   
   tags = {
     Environment = "${var.environment_tag}"
-    Name = "${var.environment_tag} Ec2 Terraform"
+    Name = "${var.environment_tag} Ec2 Terraformm"
   }
 }
