@@ -94,7 +94,7 @@ resource "aws_instance" "testInstance" {
 		#! /bin/bash
                 sudo apt-get update
 		
-		echo "<h1>Deployed via Terraform</h1>" | sudo tee /var/www/html/index.html
+		touch /var/www/html/index.html
 	EOF
   key_name = "chandukey" 
 
